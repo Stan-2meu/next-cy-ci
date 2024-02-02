@@ -47,11 +47,11 @@ jobs:
        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
      - name: Build with Next.js
        run: npm run build
-     - name: Start Next.js
-       run: npm run start
- 
+     - name : Install Concurrently
+       run: yarn dev concurrently
+     
      - name: Run Cypress Test
        uses: cypress-io/github-action@v4
        with:
-         command: NODE_ENV=test npx cypress run
+         command: concurrently "NODE_ENV=test npx cypress run && ./killPort.sh 3000" "npm run start"
          browser: chrome
