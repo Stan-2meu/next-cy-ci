@@ -53,5 +53,5 @@ jobs:
       - name: Run Cypress Test
         uses: cypress-io/github-action@v4
         with:
-          command: npx concurrently "NODE_ENV=test npx cypress run && killall node" "npm run start"
+          command: npx concurrently "NODE_ENV=test npx cypress run && PID=$(lsof -ti :3000); kill -3 $PID" "npm run start"
           browser: chrome
