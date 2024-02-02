@@ -1,4 +1,3 @@
-runs-on: self-hosted
 name: Cypress Tests
 on:
   push:
@@ -8,7 +7,8 @@ on:
 
 jobs:
   Cypress-Test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    # runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
