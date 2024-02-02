@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "c": "cypress run -b chrome",
-    "test": "NODE_ENV=test start-server-and-test start http://localhost:3000 \"cypress run -b chrome\""
+    "test": "NODE_ENV=test start-server-and-test start http://localhost:3000 \"cypress run -b electron\""
   },
   "dependencies": {
     "next": "14.1.0",
