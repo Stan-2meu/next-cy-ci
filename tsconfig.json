@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@/common/*": ["common/*"],
+      "@/styles/*": ["styles/*"],
       "@/modules/*": ["modules/*"],
       "@/scripts/*": ["scripts/*"],
       "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"],
